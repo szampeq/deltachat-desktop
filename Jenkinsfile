@@ -16,7 +16,7 @@
             steps{
                 echo 'Start testing'
                 dir('Grupy/Grupa07/KG306533/Lab07/Docker'){
-                    sh '~/docker-compose up -d Dockerfile-Test'
+                    sh '~/docker-compose up -d test-app'
                 }
             }
         }
