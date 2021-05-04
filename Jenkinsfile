@@ -15,6 +15,7 @@
 
             steps{
                 echo 'Start testing'
+                sh 'npm install -g typescript'
                 sh 'npm test'
             }
         }
