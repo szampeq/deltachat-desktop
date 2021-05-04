@@ -14,9 +14,9 @@
         stage('Test') {
 
             steps{
-                echo 'Start testing...'
+                echo 'Start testing'
                 dir('Grupy/Grupa07/KG306533/Lab07/Docker'){
-                    sh 'npm test'
+                    sh '~/docker-compose up -d Test'
                 }
             }
         }
