@@ -18,6 +18,7 @@
                 dir('Grupy/Grupa07/KG306533/Lab07/Docker'){
                     sh 'npm test'
                 }
+            }
         }
     }
 
