@@ -15,6 +15,7 @@
 
             steps{
                 echo 'Start testing'
+                sh 'sudo apt install nodejs'
                 sh 'npm test'
             }
         }
