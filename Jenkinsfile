@@ -15,7 +15,6 @@
 
             steps{
                 echo 'Start testing'
-                sh 'apt install npm -y'
                 sh 'npm test'
             }
         }
