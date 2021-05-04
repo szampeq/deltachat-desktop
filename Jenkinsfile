@@ -17,7 +17,7 @@ pipeline {
                     sh 'npm test'
                 }
             }
-    
+    }
     post {
 
         success {
