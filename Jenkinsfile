@@ -8,6 +8,7 @@
         stage('Build'){
 
             steps{
+                checkout scm
                 echo "Building..."
                 sh 'npm i'
                 sh 'npm run build'
@@ -17,7 +18,9 @@
 
         stage('Test') {
             when {
-                expression {currentBuild.result == 'SUCCESS'}
+                expression {
+                    currentBuild.result == null || currentBuild.result == 'SUCCESS'
+                }
             }
             steps{
                 echo 'Start testing'
