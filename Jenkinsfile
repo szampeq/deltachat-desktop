@@ -7,16 +7,19 @@
 
             steps{
                 echo "Building..."
+                sh 'npm i'
+                sh 'npm run build'
                 }
             }
 
 
         stage('Test') {
-
+            when {
+                expression {currentBuild.result == 'SUCCESS'}
+            }
             steps{
                 echo 'Start testing'
-                sh 'npm install -g typescript'
-                sh 'npm test'
+                sh 'npm run test'
             }
         }
     }
