@@ -12,7 +12,7 @@
 
 ## Table of Contents
 
-<details><summary>Click to expand!</summary>
+<details><summary>Click to expand</summary>
 
 - [Install](#install)
   - [Linux](#linux)
