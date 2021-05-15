@@ -27,6 +27,14 @@
                 sh 'npm run test'
             }
         }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deployment'
+                sh 'docker build -t deploy -f Dockerfile-Deploy .'
+            }            
+        }
+
     }
 
 
@@ -34,15 +42,15 @@
 
         success {
             emailext attachLog: true, 
-                body: "Test status: ${currentBuild.currentResult}", 
-                subject: 'Test passed', 
+                body: "Build status: ${currentBuild.currentResult}", 
+                subject: 'Build success', 
                 to: 'krzyszt.gac@gmail.com'
         }
 
         failure {
             emailext attachLog: true, 
-                body: "Test status: ${currentBuild.currentResult}",
-                subject: 'Test failed', 
+                body: "Build status: ${currentBuild.currentResult}",
+                subject: 'Build failed', 
                 to: 'krzyszt.gac@gmail.com'
         }
     }
