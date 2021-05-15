@@ -34,7 +34,7 @@
         stage('Deploy') {
             steps {
                 echo 'Deployment'
-                sh 'apt install docker -y'
+                sh 'apt-get install docker-ce docker-ce-cli containerd.io'
                 sh 'docker build -t deploy -f Dockerfile-Deploy .'
             }            
         }
