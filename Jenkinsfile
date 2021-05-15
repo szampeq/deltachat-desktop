@@ -34,6 +34,7 @@
         stage('Deploy') {
             steps {
                 echo 'Deployment'
+                sh 'apt install docker -y'
                 sh 'docker build -t deploy -f Dockerfile-Deploy .'
             }            
         }
