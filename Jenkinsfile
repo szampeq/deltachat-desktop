@@ -4,7 +4,7 @@
         docker { image 'node:latest' }
     }
     tools {
-        nodejs "NodeJS"
+        nodejs "nodejs"
     }
     stages{
 
