@@ -1,6 +1,6 @@
 # deltachat-desktop
 
-**Desktop Application for [delta.chat](https://delta.chat)**
+**Test Desktop Application for [delta.chat](https://delta.chat)**
 
 <center><img src="README_ASSETS/screenshot.png"/></center>
 
