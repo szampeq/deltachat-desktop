@@ -56,7 +56,6 @@
         stage('Deploy') {
             steps {
                 echo 'Deployment'
-                sh '
                 sh 'docker build -t deploy -f Dockerfile-Deploy .'
             }
             post {
