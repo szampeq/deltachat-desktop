@@ -3,9 +3,6 @@
     agent {
         docker { image 'node:latest' }
     }
-    tools {
-        nodejs "nodejs"
-    }
     stages{
 
         stage('Build'){
@@ -34,7 +31,6 @@
         stage('Deploy') {
             steps {
                 echo 'Deployment'
-                sh 'apt-get install docker-ce docker-ce-cli containerd.io'
                 sh 'docker build -t deploy -f Dockerfile-Deploy .'
             }            
         }
