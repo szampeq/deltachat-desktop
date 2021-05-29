@@ -57,6 +57,7 @@
             steps {
                 echo 'Deployment'
                 sh 'docker build -t deploy -f Dockerfile-Deploy .'
+                sh 'npm start'
             }
             post {
                 success {
